@@ -1,0 +1,134 @@
+<app-midlebar></app-midlebar>
+
+<div id="appointment" class="section wb">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <small>AGENDE O SEU HORÁRIO</small>
+                <h3>AGENDAMENTO</h3>
+                <hr class="grd1">
+                <p class="lead">.</p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="appointment-left">
+                    <h2>Horários Disponíveis</h2>
+                    <div class="appointment-time">
+                        <ul>
+                            <li>
+                                <span>Segunda-Feira </span><span>9AM-6PM</span>
+                            </li>
+                            <li>
+                                <span>Terça-Feira </span><span>9am-6pm</span>
+                            </li>
+                            <li>
+                                <span>Quarta-Feira </span><span>9am-6pm</span>
+                            </li>
+                            <li>
+                                <span>Quinta-Feira </span><span>9am-6pm</span>
+                            </li>
+                            <li>
+                                <span>Sexta-Feira </span><span>9am-6pm</span>
+                            </li>
+                            <li>
+                                <span>Sábado </span><span>10am-4pm</span>
+                            </li>
+                            <li>
+                                <span>Domingo </span><span>Fechado</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact_form">
+                    <div id="message"></div>
+                    <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                        <fieldset class="row-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" #firstName name="first_name" id="first_name" class="form-control" placeholder="Nome">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" #lastName name="last_name" id="last_name" class="form-control" placeholder="Sobrenome">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="date" #date name="date" id="date" class="form-control">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="time" #time name="time" id="time" class="form-control">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <textarea class="form-control" #details name="comments" id="comments" rows="6" placeholder="Mais detalhes..."></textarea>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <button type="button" value="SEND" id="appointment" class="btn btn-light btn-radius btn-brd grd1 btn-block subt" (click)="registerAppointment(firstName.value+' '+lastName.value, date.value, time.value, details.value)">Agendar</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="appointment" class="section wb">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Horários Agendados</h3>
+                <hr class="grd1">
+                <p class="lead"> Horários dos clientes já agendados, estes agendamentos podem ser realizados online,
+                    pelo site, ou por Telefone, abaixo os clientes agendados.</p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_form">
+                    <form id="contactform" class="row" action="contact.php" name="contactform" method="post"
+                        *ngFor="let appointment of appointments">
+                        <fieldset class="row-fluid">
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="day" id="day_item" class="form-control"
+                                    [placeholder]="appointment.date" disabled>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="first_name" id="first_name" class="form-control"
+                                    [placeholder]="appointment.name" disabled>
+                            </div>
+                            <input type="text" name="appointmentID" id="appointmentID" class="form-control" [value]="appointment.id" #appointment_id disabled hidden>
+                            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                <button type="button" id="login" class="btn btn-light btn-radius btn-brd grd1 btn-block subt" (click)="clearAppoinment(appointment_id.value)">Clear Appointment</button>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                                <button type="button" id="login" class="btn btn-light btn-radius btn-brd grd1 btn-block subt" (click)="confirmAppoinment(appointment_id.value)" [disabled]="appointment.confirm">Confirm</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off"
+    style="background-image:url('assets/uploads/parallax_20.jpg');">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <small>CONHEÇA NOSSO ATENDIMENTO</small>
+                <h3>ATENDIMENTO AOS CLIENTES</h3>
+                <hr class="grd1">
+                <p class="lead">Telefone: (31) 3466-6788<br>
+                    Celular: (31) 98755-8261.<br>
+                    Email: Barbershop.bh@outlook.com<br>
+                    Rua Pomba Branca, 445, Padre Eustáquio, MG</p>
+                <br><br>
+                <a [routerLink]="['/contact']" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Mande
+                    uma mensagem</a>
+            </div>
+        </div><!-- end title -->
+    </div><!-- end container -->
+</div><!-- end section -->

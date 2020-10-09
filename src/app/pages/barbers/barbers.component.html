@@ -1,0 +1,68 @@
+<app-sidebar-top></app-sidebar-top>
+
+<app-midlebar></app-midlebar>
+
+<div id="barbers" class="section lb">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <small>CONHEÇA O TIME THE BARBER'S</small>
+                <h3>The Barber's</h3>
+                <hr class="grd1">
+                <p class="lead">A equipe The Barber's foi montada com o intuito principal de trazer a harmonia e
+                    excelência dos serviços realizados na BarberShop, são diretamente responsáveis pelos cortes
+                    de cabelo, barba e entre outros, Além de estimularem um ambiente super divertido dentro da
+                    barbearia.</p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row dev-list text-center">
+            <div *ngFor="let b of barbersService.listBarbers" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn"
+                data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="widget clearfix">
+                    <div class="hover-br">
+                        <img [src]="b.imagePath" alt="" class="img-responsive">
+                        <div class="social-up-hover">
+                            <div class="footer-social">
+                                <a [routerLink]="['/profile',b.id]" *ngIf="b.facebook != ''" [href]="b.facebook" class="btn grd1"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a *ngIf="b.git != ''" [href]="b.git" class="btn grd1"><i class="fa fa-github"></i></a>
+                                <a *ngIf="b.twitter != ''" [href]="b.twitter" class="btn grd1"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a *ngIf="b.likedin != ''" [href]="b.likedin" class="btn grd1"><i
+                                        class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-title">
+                        <h3>{{b.name}}</h3>
+                        <small>{{b.occupation}}</small>
+                    </div>
+                    <!-- end title -->
+                    <p>{{b.text}}.</p>
+                </div>
+                <!--widget -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off"
+    style="background-image:url('assets/uploads/parallax_20.jpg');">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <small>CONHEÇA NOSSO ATENDIMENTO</small>
+                <h3>ATENDIMENTO AOS CLIENTES</h3>
+                <hr class="grd1">
+                <p class="lead">Telefone: (31) 3466-6788<br>
+                    Celular: (31) 98755-8261.<br>
+                    Email: Barbershop.bh@outlook.com<br>
+                    Rua Pomba Branca, 445, Padre Eustáquio, MG</p>
+                <br><br>
+                <a [routerLink]="['/contact']" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Mande
+                    uma mensagem</a>
+            </div>
+        </div><!-- end title -->
+    </div><!-- end container -->
+</div><!-- end section -->

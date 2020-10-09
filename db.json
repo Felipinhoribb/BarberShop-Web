@@ -1,0 +1,213 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123456",
+      "perfil": "admin",
+      "name": "Administrador",
+      "email": "admin@site.com.br",
+      "cpf": "12345678910",
+      "birth": "1994-03-01"
+    },
+    {
+      "id": 2,
+      "username": "cliente",
+      "password": "123456",
+      "perfil": "cliente",
+      "name": "Cliente",
+      "email": "cliente@sitec.com.br",
+      "cpf": "10987654321",
+      "birth": "1994-03-01"
+    },
+    {
+      "id": 3,
+      "date": "[object HTMLInputElement] [object HTMLInputElement]",
+      "user_id": 2,
+      "name": "[object HTMLInputElement] [object HTMLInputElement]",
+      "details": {}
+    },
+    {
+      "id": 4,
+      "username": "teste",
+      "password": "123456",
+      "perfil": "cliente",
+      "name": "Stephan Bartkowiak",
+      "email": "teste@teste.com.br",
+      "cpf": "12345678910",
+      "birth": "1994-03-01"
+    }
+  ],
+  "appoinment": [
+    {
+      "id": 1,
+      "date": "10/09/2019 10:00:00",
+      "name": "Taito Fu",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 2,
+      "date": "15/09/2019 12:10:00",
+      "name": "Mario",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 3,
+      "date": "10/09/2019 12:30:00",
+      "name": "Luigi",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 4,
+      "date": "10/09/2019 13:53:00",
+      "name": "Link",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 5,
+      "date": "10/09/2019 16:37:00",
+      "name": "Zelda",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 6,
+      "date": "10/09/2019 15:32:00",
+      "name": "Pikachu",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 7,
+      "date": "10/09/2019 11:02:00",
+      "name": "Dragonite",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 8,
+      "date": "10/09/2019 13:50:00",
+      "name": "Kurby",
+      "user_id": 2,
+      "details": ""
+    },
+    {
+      "id": 11,
+      "date": "1994-03-0103:01",
+      "user_id": 2,
+      "name": "fsdfdsaf fdasfa"
+    },
+    {
+      "id": 12,
+      "date": "1994-03-01 10:03",
+      "user_id": 2,
+      "name": "Stephan Bartkowiak dkoaod",
+      "details": ""
+    }
+  ],
+  "barbers": [
+    {
+      "id": 1,
+      "imagePath": "assets/uploads/barber_team_01.jpg",
+      "name": "Leandro Reis",
+      "occupation": "Fundador",
+      "text": "Olá pessoal, eu sou Leandro Reis. Sou diretor de arte sênior e fundador da BarberShop.",
+      "facebook": "face/leandro",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 2,
+      "imagePath": "assets/uploads/barber_team_03.jpg",
+      "name": "Gustavo Oliveira",
+      "occupation": "Barbeiro",
+      "text": "Olá pessoal, eu sou Gustavo Oliveira. Sou diretor de arte sênior e barbeiro da BarberShop..",
+      "facebook": "face/gustavo",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 3,
+      "imagePath": "assets/uploads/barber_team_02.jpg",
+      "name": "Alan Felipe",
+      "occupation": "Barbeiro",
+      "text": "Olá pessoal, eu sou Alan Felipe. Sou diretor de arte e barbeiro do site da barbearia.",
+      "facebook": "face/Alanfelipe",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 4,
+      "imagePath": "assets/uploads/barber_team_04.jpg",
+      "name": "James Harden",
+      "occupation": "Barbeiro",
+      "text": "Olá pessoal, eu sou J. Harden. Sou americano e trago os melhores e mais atuais estilos afro-americanos.",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 5,
+      "imagePath": "assets/uploads/barber_team_05.jpg",
+      "name": "Kyrie Irving",
+      "occupation": "Barbeiro & Estilista",
+      "text": "Hello guys, eu sou Kyrie. Venho dos EUA e trago toda a experiência americana para a BarberShop.",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 6,
+      "imagePath": "assets/uploads/barber_team_06.jpg",
+      "name": "Lucas Felipe",
+      "occupation": "Barbeiro",
+      "text": "Fala galera, eu sou Lucas. Venha nos fazer uma visita, você vai gostar dos cortes de cabelo e barba separados por mim.",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 7,
+      "imagePath": "assets/uploads/barber_team_07.jpg",
+      "name": "Christofer Wallace",
+      "occupation": "Barbeiro",
+      "text": "Iae galera, eu sou Christofer, cuido de cortes mais específicos como tranças, dreads e entre outros, bora fazer algo novo? haha...",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 8,
+      "imagePath": "assets/uploads/barber_team_08.jpg",
+      "name": "Vinicius Andersom",
+      "occupation": "Barbeiro",
+      "text": "Olá pessoal, eu sou Vinícius. Trabalho com os cortes da moda atual, para o público de jovens e crianças, não perca tempo e marque o seu horário.",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    },
+    {
+      "id": 9,
+      "imagePath": "assets/uploads/barber_team_09.jpg",
+      "name": "Ana Rabelo",
+      "occupation": "Barbeira Designer & Estilista",
+      "text": "Olá pessoal, eu sou a Ana. Sou barbeira, designer e estilista da BarberShop venha conhecer nosso trabalho, esperamos vocês.",
+      "facebook": "face/fernando",
+      "twitter": "",
+      "likedin": "",
+      "git": ""
+    }
+  ]
+}

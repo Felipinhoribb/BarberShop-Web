@@ -1,0 +1,54 @@
+<app-sidebar-top></app-sidebar-top>
+
+<app-midlebar></app-midlebar>
+
+<div id="services" class="section lb">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <small>CONHEÇA OS SERVIÇOS DA BARBERSHOP</small>
+                <h3>NOSSOS SERVIÇOS</h3>
+                <hr class="grd1">
+                <p class="lead">Montamos uma amostra dos serviços realizados na BarberShop, nossos profissionais são
+                    capacitados e atuam em diversas áreas, confira.</p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div *ngFor="let serv of servicesService.listService" class="col-md-6">
+                <div class="service-wrap clearfix">
+                    <img [src]="serv.imagePath" alt="" class="img-responsive img-rounded alignleft">
+                    <h4>{{serv.title}}</h4>
+                    <p>{{serv.text}}</p>
+                </div><!-- end issue -->
+            </div><!-- end col -->
+        </div>
+
+        <hr class="invis4">
+
+        <div class="text-center">
+            <a [routerLink]="['/appointment']" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">AGENDE
+                SEU HORÁRIO AGORA</a>
+        </div>
+    </div><!-- end container -->
+</div><!-- end section -->
+
+<div id="testimonials" class="parallax section db parallax-off"
+    style="background-image:url('assets/uploads/parallax_20.jpg');">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <<div class="col-md-8 col-md-offset-2">
+                <small>CONHEÇA NOSSO ATENDIMENTO</small>
+                <h3>ATENDIMENTO AOS CLIENTES</h3>
+                <hr class="grd1">
+                <p class="lead">Telefone: (31) 3466-6788<br>
+                    Celular: (31) 98755-8261.<br>
+                    Email: Barbershop.bh@outlook.com<br>
+                    Rua Pomba Branca, 445, Padre Eustáquio, MG</p>
+                <br><br>
+                <a [routerLink]="['/contact']" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Mande
+                    uma mensagem</a>
+        </div>
+    </div><!-- end title -->
+</div><!-- end container -->
+</div><!-- end section -->

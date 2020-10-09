@@ -1,0 +1,41 @@
+<app-midlebar></app-midlebar>
+
+<div id="account" class="section wb">
+    <div class="container-fluid">
+        <div class="section-title row text-center">
+            <div class="col-md-8 col-md-offset-2">
+            <small>SEJA BEM-VINDO</small>
+            <h3>{{user.name}}</h3>
+            <hr class="grd1">
+            <p class="lead">Seja Bem-vindo, nós da BarberShop ficamos feliz de termos você.</p>
+            </div>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="contact_form">
+                    <div id="message"></div>
+                    <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                        <fieldset class="row-fluid">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nome Completo" [value]="user.name" disabled>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="birth" id="birth" class="form-control" placeholder="Nascimento" [value]="user.birth" disabled>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Email" [value]="user.email" disabled>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="CPF" [value]="user.cpf" disabled>
+                            </div>
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                <button type="button" id="login" class="btn btn-light btn-radius btn-brd grd1 btn-block subt" [routerLink]="['/login']">Editar</button>
+                            </div> -->
+                        </fieldset>
+                    </form>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div><!-- end section -->
